@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Button, FormControl, Input, InputLabel } from "@material-ui/core";
+import { FaCheck } from "react-icons/fa";
 import "./App.css";
 
 function App() {
@@ -16,10 +18,22 @@ function App() {
     <div className="App">
       <h1>Hello world</h1>
       <form>
-        <input value={input} onChange={(e) => setInput(e.target.value)} />
-        <button type="submit" onClick={addTodo}>
-          Add
-        </button>
+        <FormControl>
+          <InputLabel htmlFor="my-input">
+            Write a Todo <FaCheck />
+          </InputLabel>
+          <Input value={input} onChange={(e) => setInput(e.target.value)} />
+        </FormControl>
+
+        <Button
+          disabled={!input}
+          type="submit"
+          onClick={addTodo}
+          variant="contained"
+          color="primary"
+        >
+          Add Todo
+        </Button>
       </form>
 
       <ul>
