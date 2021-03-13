@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, FormControl, Input, InputLabel } from "@material-ui/core";
 import { FaCheck } from "react-icons/fa";
+import Todo from "./Todo";
 import "./App.css";
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello world</h1>
+      <h1>Todo List</h1>
       <form>
         <FormControl>
           <InputLabel htmlFor="my-input">
@@ -38,7 +39,7 @@ function App() {
 
       <ul>
         {todos.map((todo) => (
-          <li>{todo}</li>
+          <Todo text={todo} />
         ))}
       </ul>
     </div>
