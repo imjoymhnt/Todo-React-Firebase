@@ -1,5 +1,5 @@
 import firebase from "firebase";
-const firebaseApp = firenase.initializeApp({
+const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyAYFvoSgxco1dLnfsGt6v45PhtS6vSumK4",
   authDomain: "todo-app-515eb.firebaseapp.com",
   projectId: "todo-app-515eb",
@@ -10,4 +10,4 @@ const firebaseApp = firenase.initializeApp({
 });
 
 const db = firebaseApp.firestore();
-export { db };
+export default db;
